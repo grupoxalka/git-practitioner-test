@@ -20,48 +20,60 @@ fetch(`${API_URL}/character/${array}`)
     responseCharacters.forEach(async (responseCharacter) => {
       //console.log(responseCharacter);
       //declaracion de propiedades
-      let documentFragment = document.createDocumentFragment(); // es mi contenedor principal
-      let elemImg = document.createElement("img");
-      let elemDiv = document.createElement("div");
-      let elemH2 = document.createElement("h2");
-      let elemStatus = document.createElement("p");
-      let elemP1 = document.createElement("p");
-      let elemLoc = document.createElement("a");
-      let elemP2 = document.createElement("p");
-      let elemEp = document.createElement("a"); //para el episodio
-      let nameEpisode = await getEpisode(responseCharacter.episode[0]); // arreglando una promise y llamando a name episode llega como obj
-      //console.log("nameEpisode", typeof nameEpisode);
+      let documentFragment = document.createDocumentFragment(); // no es conteneodr es un fragmento para que se muestre en la pantalla 
+      let divCard = document.createElement("div");
+      let divImgContainer = document.createElement("div");
+      let divInfoContainer = document.createElement("div");
 
-      //llamo estilos css con .className
-      elemDiv.className = "inf-card";
-      elemH2.className = "name";
-      elemLoc.className = "a-edit-container";
-      elemEp.className = "a-edit-container";
-      elemLoc.className ="a-card"
-      elemEp.className = "a-card"
-      elemImg.className = "img-card";
+      let divNameStatusContainer = document.createElement("div");
+      let divEpisodeContainer = document.createElement("div");
+      let divLocationContainer = document.createElement("div");
 
+      let imgElement = document.createElement("img");
+      let aNameElement = document.createElement("a");
+      let pStatusElement = document.createElement("p");
+      let pTitleLocationElement = document.createElement("p");
+      let aLocationElement = document.createElement("a");
+      let pTitleEpisodeElement = document.createElement("p");
+      let nameEpisode = await getEpisode(responseCharacter.episode[0]);
+      let aEpisodeElement = document.createElement("a");
 
-      //traigo la informacion
-      elemImg.src = `${responseCharacter.image}`;
-      elemH2.textContent = `${responseCharacter.name}`; //contenido de texto
-      elemStatus.textContent = `${responseCharacter.status} - ${responseCharacter.species}`;
-      elemP1.textContent = `Last known location:`;
-      elemLoc.textContent = `${responseCharacter.location.name}`; //acceso a una propiedad que contine un obj
-      elemP2.textContent = `First seen in:`;
-      elemEp.textContent = `${nameEpisode}`;
+      divCard.className = "card";
+      divImgContainer.className = "img-container";
+      divInfoContainer.className = "info-container";
+      divNameStatusContainer.className = "name-container";
+      aNameElement.className = "name-element";
+      divLocationContainer.className = "location-container";
+      divEpisodeContainer.className = "episode-container";
+      aNameElement.className = "name-element";
+      aEpisodeElement.className = "a-edit-container";
+      aLocationElement.className = "a-edit-container";
 
-      //creo nodos o hijos lo como en el contenedos principal
-      documentFragment.appendChild(elemDiv);
-      elemDiv.appendChild(elemImg);
-      elemDiv.appendChild(elemH2);
-      elemDiv.appendChild(elemStatus);
-      elemDiv.appendChild(elemP1);
-      elemDiv.appendChild(elemLoc);
-      elemDiv.appendChild(elemP2);
-      elemDiv.appendChild(elemEp);
+      imgElement.src = `${responseCharacter.image}`;
+      aNameElement.textContent = `${responseCharacter.name}`;
+      pStatusElement.textContent = `${responseCharacter.status} - ${responseCharacter.species}`;
+      pTitleLocationElement.textContent = `Last known location:`;
+      aLocationElement.textContent = `${responseCharacter.location.name}`; //acceso a una propiedad que contine un obj
+      pTitleEpisodeElement.textContent = `First seen in:`;
+      aEpisodeElement.textContent = `${nameEpisode}`;
 
-    
+      divImgContainer.appendChild(imgElement);
+      documentFragment.appendChild(divCard);
+      divCard.appendChild(divImgContainer);
+
+      divNameStatusContainer.appendChild(aNameElement);
+      divNameStatusContainer.appendChild(pStatusElement);
+      divInfoContainer.appendChild(divNameStatusContainer);
+
+      divLocationContainer.appendChild(pTitleLocationElement);
+      divLocationContainer.appendChild(aLocationElement);
+      divInfoContainer.appendChild(divLocationContainer);
+
+      divEpisodeContainer.appendChild(pTitleEpisodeElement);
+      divEpisodeContainer.appendChild(aEpisodeElement);
+      divInfoContainer.appendChild(divEpisodeContainer);
+
+      divCard.appendChild(divInfoContainer);
 
       //Se muestra en el html
       HTMLResponse.appendChild(documentFragment); //le paso el contenerdor
