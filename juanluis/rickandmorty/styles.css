@@ -38,17 +38,19 @@ h1 {
 
 .mycontainer {
     background-color: rgba(6, 4, 18, 0.885);
-    width: 100%;
     display: flex;
+    
+
 }
 
 .container-box {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px 20px;
+    gap: 5px 10px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    width: 100%;
     justify-content: center;
-    margin-bottom: 55px;
-    margin-top: 55px;
 }
 
 div .sub-box {
@@ -62,9 +64,9 @@ div .sub-box {
     justify-content: center;
     align-items: center;
     display: flex;
-    gap: 10px 30px;
+    gap: 10px 15px;
     margin-top: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .status {
