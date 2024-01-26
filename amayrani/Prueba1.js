@@ -33,3 +33,4 @@ let alturaJonh = prompt("Ingresa la altura de Jonh: ");
   console.log("El IMC de Mark es: " + bmiMark);
   console.log("El IMC de John es: " + bmiJohn);
 
+
