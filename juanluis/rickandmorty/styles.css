@@ -1,8 +1,4 @@
-body {
-    background-color: rgb(255, 255, 255);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
+/*------------HEADER------------------*/
 h1 {
     font-size: 90px;
     text-align: center;
@@ -18,21 +14,63 @@ h1 {
     align-items: center;
 }
 
-.menu-container {
+.container-navimg {
     display: flex;
     justify-content: space-between;
 }
 
-.menu-der {
+.right-nav {
     display: flex;
 }
 
-.menu-container1 img {
+.container-imgbackgroud img {
     width: 50px;
     height: 50px;
 }
 
-.mycontainer {
+.sub-box img {
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.nav a {
+    display: flex;
+    color: rgb(18, 3, 3);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav a:hover,
+.sub-footer a:hover,
+.footer-server-madeby a:hover {
+    color: darkorange;
+}
+
+button {
+    cursor: pointer;
+    background-color: #fff;
+    color: darkorange;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-color: darkorange;
+}
+
+button:hover {
+    background-color: darkorange;
+    color: black;
+}
+
+/*----------------------------------------------------------------------------*/
+/*--------------Body---------------*/
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container {
     background-color: rgba(6, 4, 18, 0.885);
     display: flex;
 }
@@ -63,7 +101,7 @@ div .sub-box {
     margin-bottom: 15px;
 }
 
-.status {
+.status-character {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -75,48 +113,47 @@ p {
     color: #f2f2f2;
 }
 
-.circle {
+.circle-status {
     width: 10px;
     height: 10px;
     background-color: green;
     border-radius: 100%;
 }
 
-.text-container .infcaracter a {
-    display: flex;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    text-decoration: none;
+.text-container .nameLocation-nameEpisode a {
     font-size: 17px;
     margin-bottom: 15px;
 }
 
-.tituloper a {
+.text-container .nameLocation-nameEpisode a,
+.name-character a {
     display: flex;
     color: rgb(255, 255, 255);
     text-align: center;
     text-decoration: none;
+}
+
+.name-character a {
     font-size: 20px;
 }
 
-.text-container .inftitulo {
+.text-container .data-status-species {
     font-size: 15px;
     margin-bottom: 10px;
 }
 
-.text-container .caracter1,
-.text-container .caracter2 {
+.text-container .location-character,
+.text-container .episode-character {
     font-size: 15px;
     color: grey;
 }
 
-.tituloper a:hover,
-.infcaracter a:hover {
+.name-character a:hover,
+.nameLocation-nameEpisode a:hover {
     color: darkorange;
 }
 
 .text-container {
-    flex: 1;
     width: 500px;
     height: 200px;
     display: flex;
@@ -125,44 +162,11 @@ p {
     background-color: rgb(65, 65, 65);
     font-style: normal;
     margin-right: 10px;
-    gap: 0px;
 }
 
-.sub-box img {
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-}
-
-.menu a {
-    display: flex;
-    color: rgb(18, 3, 3);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.menu a:hover,
-.foo a:hover,
-.footer1 a:hover {
-    color: darkorange;
-}
-
-button {
-    cursor: pointer;
-    background-color: #fff;
-    color: darkorange;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border-color: darkorange;
-}
-
-button:hover {
-    background-color: darkorange;
-    color: black;
-}
-
-.foo a {
+/*------------------------------------------------------------------*/
+/*---------------Footer--------------*/
+.sub-footer a {
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -170,7 +174,7 @@ button:hover {
     text-decoration: none;
 }
 
-.footer1 a {
+.footer-server-madeby a {
     display: flex;
     color: rgb(255, 255, 255);
     text-align: center;
@@ -178,14 +182,14 @@ button:hover {
     text-decoration: none;
 }
 
-.footer1 img {
+.footer-server-madeby img {
     max-width: 0.5%;
 }
 
 .footer,
-.footer1,
-.footer2,
-.footer3 {
+.footer-server-madeby,
+.footer-company,
+.footer-socialnetworks {
     display: flex;
     max-width: 100%;
     background-color: rgba(0, 0, 0, 0.893);
@@ -195,16 +199,18 @@ button:hover {
     font-size: 12px;
 }
 
-.footer2 img {
+.footer-company img {
     width: 60px;
     height: 60px;
     margin-left: 10px;
 }
 
-.footer3 img {
+.footer-socialnetworks img {
     width: 20px;
     height: 20px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 15px
 }
+
+/*------------------------------------------------------------------*/
