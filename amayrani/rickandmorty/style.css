@@ -1,15 +1,18 @@
-/*etiqueta principal*/
 body {
-  padding: 0%;
-  margin: 0%;
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
 }
 
-/*etiqueta principal*/
 div {
   display: flex;
 }
 
-.div-tittle {
+p {
+  margin: 0;
+  color: #222122;
+  font-size: 18px;
+}
+
+.div-title {
   width: 100%;
   height: 200px;
   background-image: url(rickandmorty.png);
@@ -19,24 +22,12 @@ div {
   justify-content: center;
 }
 
-.div-main {
+.background-container {
   width: 100%;
-  height: 800px;
   background-color: #33323b;
 }
 
-.contenido {
-  margin: 0;
-}
-
-.div-footer {
-  position: relative;
-  width: auto;
-  height: 250px;
-  background-color: #1c1f21;
-}
-
-.img {
+.style-position-netlify {
   width: 150px;
   /* Establece el ancho del botón */
   height: 40px;
@@ -47,7 +38,7 @@ div {
   bottom: 110px;
 }
 
-.img2 {
+.style-positon-stallate {
   width: 150px;
   /* Establece el ancho del botón */
   height: 40px;
@@ -58,144 +49,14 @@ div {
   bottom: 110px;
 }
 
-.github {
-  color: #ffffff;
-  /* Color del texto naranja */
-  font-size: 20px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
-  padding: 10px 20px;
-  /* Ajusta el relleno del botón según sea necesario */
-  width: 200px;
-  /* Establece el ancho del botón */
-  height: 50px;
-  /* Establece la altura del botón */
-  border: none;
-  /* Sin borde */
-  margin-top: 60px;
-  position: absolute;
-  left: 550px;
-  /* Posición desde la derecha */
-  bottom: 32px;
-}
 
-.github:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-.twitter {
-  color: #ffffff;
-  /* Color del texto naranja */
-  font-size: 20px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
-  padding: 10px 20px;
-  /* Ajusta el relleno del botón según sea necesario */
-  width: 200px;
-  /* Establece el ancho del botón */
-  height: 50px;
-  /* Establece la altura del botón */
-  border: none;
-  /* Sin borde */
-  margin-top: 60px;
-  position: absolute;
-  left: 685px;
-  /* Posición desde la derecha */
-  bottom: 32px;
-}
-
-.twitter:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-.heart {
-  color: #ffffff;
-  /* Color del texto naranja */
-  font-size: 20px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
-  padding: 10px 20px;
-  /* Ajusta el relleno del botón según sea necesario */
-  width: 200px;
-  /* Establece el ancho del botón */
-  height: 50px;
-  /* Establece la altura del botón */
-  border: none;
-  /* Sin borde */
-  margin-top: 60px;
-  position: absolute;
-  left: 850px;
-  /* Posición desde la derecha */
-  bottom: 32px;
-}
-
-.heart:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-
-
-.status {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-.circle {
-  width: 10px;
-  height: 10px;
-  background-color: chartreuse;
-  border-radius: 100%;
-}
-
-.a-footer {
-  color: #ffffff;
-  /* Color del texto naranja */
-  font-size: 12px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
-  padding: 10px 20px;
-  /* Ajusta el relleno del botón según sea necesario */
-  width: 200px;
-  /* Establece el ancho del botón */
-  height: 50px;
-  /* Establece la altura del botón */
-  border: none;
-  /* Sin borde */
-  margin-top: 60px;
-  position: absolute;
-  left: 640px;
-  /* Posición desde la derecha */
-  bottom: 2px;
-  text-decoration: none;
-}
-
-.a-footer:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-.icon {
-  font-size: 40px;
-  /* Tamaño de la fuente */
-}
 
 /* Estilo para los encabezados */
 h1 {
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   color: #000000;
-  /* Cambia el color a tu preferencia */
   font-size: 60px;
-  /* Cambia el tamaño de la fuente según tus necesidades */
   text-align: center;
-  /* Alinea el texto al centro */
 }
 
 .header-container {
@@ -206,58 +67,41 @@ h1 {
 
 .a-edit {
   border: none;
-  /* Contorno de color naranja */
   background-color: #ffffff;
-  /* Relleno de color blanco */
   color: #000000;
-  /* Color del texto naranja */
   padding: 10px 20px;
-  /* Espaciado interno del botón */
   font-size: 16px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
   margin-right: 20px;
   margin-top: 15px;
   text-decoration: none;
 }
 
-.a-edit:hover {
-  background-color: #ffffff;
-  /* Cambia el color de fondo al pasar por encima */
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
+
 
 .a-edit-container {
   padding: 0;
   font-size: 16px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
   margin: 0;
   text-decoration: none;
   color: #ffffff;
 }
 
-.a-edit-container:hover {
+.a-edit-container:hover,
+.name-element:hover,
+.name:hover,
+.a-card:hover,
+.a-edit:hover,
+.style-a-footer:hover{
   color: #ff6600;
   /* Cambia el color del texto al pasar por encima */
 }
 
 .a-edit-button {
   border: 2px solid #ff6600;
-  /* Contorno de color naranja */
   background-color: #ffffff;
-  /* Relleno de color blanco */
   color: #ff6600;
-  /* Color del texto naranja */
   padding: 10px 20px;
-  /* Espaciado interno del botón */
   font-size: 16px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
   margin-right: 8px;
   margin-top: 15px;
   border-radius: 12px;
@@ -266,178 +110,50 @@ h1 {
 
 .a-edit-button:hover {
   background-color: #ff6600;
-  /* Cambia el color de fondo al pasar por encima */
   color: #ffffff;
-  /* Cambia el color del texto al pasar por encima */
 }
 
-.carac {
-  background-color: #1c1f21;
-  /* Relleno de color blanco */
-  color: #ffffff;
-  /* Color del texto naranja */
-  font-size: 15px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
-  border: none;
-  /* Sin borde */
-  position: absolute;
-  /* Establece el posicionamiento absoluto para mover el botón */
-  left: 400px;
-  /* Posición desde la izquierda */
-  bottom: 150px;
-  /* Posición desde abajo */
-  text-decoration: none;
-}
-
-.carac:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-.loca {
-  background-color: #1c1f21;
-  /* Relleno de color blanco */
-  color: #ffffff;
-  /* Color del texto naranja */
-  font-size: 15px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
-  padding: 0px;
-  /* Ajusta el relleno del botón según sea necesario */
-  border: none;
-  /* Sin borde */
-  position: absolute;
-  left: 40%;
-  /* Centra horizontalmente */
-  transform: translateX(-50%);
-  /* Ajusta la posición horizontal al centro */
-  bottom: 150px;
-  text-decoration: none;
-}
-
-.loca:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-.caps {
-  background-color: #1c1f21;
-  /* Relleno de color blanco */
-  color: #ffffff;
-  /* Color del texto naranja */
-  font-size: 15px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
-  padding: 0;
-  border: none;
-  /* Sin borde */
-  margin-top: 0px;
-  position: absolute;
-  left: 710px;
-  /* Posición desde la derecha */
-  bottom: 150px;
-  text-decoration: none;
-}
-
-.caps:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-.ser {
-  background-color: #1c1f21;
-  /* Relleno de color blanco */
-  color: #ffffff;
-  /* Color del texto naranja */
-  font-size: 15px;
-  /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
-  padding: 0;
-  /* Ajusta el relleno del botón según sea necesario */
-  border: none;
-  /* Sin borde */
-  margin-top: 0;
-  width: 121px;
-  position: relative;
-  position: absolute;
-  left: 900px;
-  /* Posición desde la derecha */
-  bottom: 150px;
-  text-decoration: none;
-}
-
-.ser:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-.punto {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  /* Ajusta la posición del punto según tu diseño */
-  transform: translateY(-50%);
-  color: chartreuse;
-}
-.card{
+.card {
   background-color: rgb(81, 87, 87);
   display: flex;
   border-radius: 20px;
   width: 500px;
   height: 200px;
   gap: 15px;
-  
+
 }
 
-.name-element{
+.name-element {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   flex-direction: column;
   gap: 8px;
   padding: 0;
   font-size: 20px;
-  cursor: pointer;
   margin: 0;
   text-decoration: none;
   color: #ffffff;
 
 }
 
-.name-element:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
-
-.location-container{
-  flex-direction: column;
-  gap: 8px;
-
-
-}
-
-
-.name-container{
+.location-container {
   flex-direction: column;
   gap: 8px;
 
 }
 
-.episode-container{
+.name-container {
   flex-direction: column;
   gap: 8px;
 
 }
 
-.img-container{
-  
-  
+.episode-container {
+  flex-direction: column;
+  gap: 8px;
+
 }
 
-
-.info-container{
+.info-container {
   flex-direction: column;
   background-color: rgb(81, 87, 87);
   gap: 10px;
@@ -445,22 +161,8 @@ h1 {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*------------------------------------------*/
-.app{
+.main-card-container {
   display: flex;
   gap: 20px;
   justify-content: space-evenly;
@@ -483,41 +185,83 @@ h1 {
   padding: 0;
   font-size: 16px;
   /* Tamaño de la fuente */
-  cursor: pointer;
-  /* Cambia el cursor al pasar por encima */
   margin: 0;
   color: #ffffff;
   align-self: flex-start;
-  
 }
 
-.name:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
 
 .a-card {
   font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
   color: #ffffff;
   margin: 0;
 }
-.a-card:hover {
-  color: #ff6600;
-  /* Cambia el color del texto al pasar por encima */
-}
+
 
 .img-card {
   max-width: 100px;
   margin-right: 20px;
 }
-a {
-  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
-  color: #ffffff;
-  margin: 0;
+
+
+.imgCharacters {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
-p {
-  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
-  color: #cdc5c5;
-  margin: 0;
+/*footer*/
+
+.footer-container {
+  flex-direction: column;
+  width: auto;
+  min-height: 250px;
+  background-color: #1c1f21;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-container {
+  display: flex;
+  gap: 45px;
+  margin: 20px 0;
+}
+
+.style-a-server {
+  margin: 10px;
+
+}
+
+.style-spot {
+  transform: translateY(-50%);
+  color: chartreuse;
+}
+
+
+
+.style-img {
+  width: 100;
+  height: 40px;
+  left: 520px;
+  bottom: 110px;
+  margin-right: 10px;
+}
+
+.icons-container {
+  margin-top: 15px;
+  gap: 50px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+
+.author-container,
+.icons-container,
+.server-container{
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.style-a-footer{
+  color: #ffffff;
+  text-decoration: none;
 }
