@@ -52,8 +52,8 @@ h1 {
 button {
     cursor: pointer;
     background-color: #fff;
-    color: darkorange;
-    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
     border-radius: 10px;
     border-color: darkorange;
 }
@@ -142,8 +142,7 @@ p {
     margin-bottom: 10px;
 }
 
-.text-container .location-character,
-.text-container .episode-character {
+.text-container .location-episode-title {
     font-size: 15px;
     color: grey;
 }

@@ -1,5 +1,6 @@
 let url = "https://rickandmortyapi.com/api/";
 let html = document.querySelector(".main-container");
+let footer = document.querySelector(".footer");
 
 let arrayper = [];
 
@@ -19,7 +20,7 @@ let getEpisodeName = (episodeUrl) => {
 };
 
 // Función principal para obtener datos de personajes y episodios
-let getDatos = (apiURL) => {
+let getData = (apiURL) => {
   return fetch(`${apiURL}character/${arrayper}`)
     .then((res) => res.json())
     .then(async (response) => {
@@ -39,10 +40,10 @@ let getDatos = (apiURL) => {
                                 <div class="circle-status"></div>
                                 <p class="data-status-species">${character.status} - ${character.species}</p>
                             </div>
-                            <p class="location-character">Last known location:</p>
+                            <p class="location-episode-title">Last known location:</p>
                             <div class="nameLocation-nameEpisode"><a href="#">${character.location.name}</a></div>
 
-                            <p class="episode-character">First seen in:</p>
+                            <p class="location-episode-title">First seen in:</p>
                             <div class="nameLocation-nameEpisode"><a href="#">${episodeName}</a></div>
                         </div>
                     </div>`;
@@ -53,5 +54,24 @@ let getDatos = (apiURL) => {
     });
 };
 
-// Llama a la función principal con la URL de la API
-getDatos(url);
+// Función para obtener datos del footer y mostrar el total de personajes, locaciones y episodios
+let getFooterData = (apiURL) => {
+  return Promise.all([
+    fetch(`${apiURL}character`),
+    fetch(`${apiURL}location`),
+    fetch(`${apiURL}episode`),
+  ]).then(async ([charactersRes, locationsRes, episodesRes]) => {
+    const charactersData = await charactersRes.json();
+    const locationsData = await locationsRes.json();
+    const episodesData = await episodesRes.json();
+
+    // Muestro el total de personajes, locations y episodes en el footer
+    footer.innerHTML = `<div class="sub-footer"><a class="active" href="#">CHARACTERS: ${charactersData.info.count}</a></div>
+                        <div class="sub-footer"><a class="active" href="#">LOCATIONS: ${locationsData.info.count}</a></div>
+                        <div class="sub-footer"><a class="active" href="#">EPISODES: ${episodesData.info.count}</a></div>`;
+  });
+};
+
+// Llamo a la función principal con la URL de la API
+getData(url);
+getFooterData(url);
