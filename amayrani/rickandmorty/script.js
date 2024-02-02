@@ -8,7 +8,7 @@ HTMLResponse.className = "main-card-container";
 let array = [];
 
 for (let i = 0; i < 6; i++) {
-  array.push(Math.floor(Math.random() * (100 - 1))); //genero numeros y convierte enteros
+  array.push(Math.floor(Math.random() * (826 - 1))); //genero numeros y convierte enteros
 }
 
 //funcnion que hace el llamado a la api  | el servicio fetch
@@ -48,6 +48,7 @@ fetch(`${API_URL}/character/${array}`)
       aEpisodeElement.className = "a-edit-container";
       aLocationElement.className = "a-edit-container";
       imgElement.className = "imgCharacters";
+      pStatusElement.className = "style-status";
 
       imgElement.src = `${responseCharacter.image}`;
       aNameElement.textContent = `${responseCharacter.name}`;
@@ -62,7 +63,11 @@ fetch(`${API_URL}/character/${array}`)
       divLocationContainer.append(pTitleLocationElement, aLocationElement);
       divEpisodeContainer.append(pTitleEpisodeElement, aEpisodeElement);
 
-      divInfoContainer.append(divNameStatusContainer, divLocationContainer, divEpisodeContainer);
+      divInfoContainer.append(
+        divNameStatusContainer,
+        divLocationContainer,
+        divEpisodeContainer
+      );
       divCard.append(divImgContainer, divInfoContainer);
       documentFragment.appendChild(divCard);
 
