@@ -25,7 +25,7 @@ let getData = (apiURL) => {
     .then((res) => res.json())
     .then(async (response) => {
       // Utiliza Promise.all para hacer solicitudes concurrentes a la API de episodios
-      const tpt = await Promise.all(
+      const contentcharacter = await Promise.all( // contentcharacter construye un arreglo de bloques html con cada personaje
         response.map(async (character) => {
           // Obtiene el nombre del episodio utilizando la función anterior
           const episodeName = await getEpisodeName(character.episode[0]);
@@ -50,7 +50,7 @@ let getData = (apiURL) => {
         })
       );
       // Inserta el HTML generado en el contenedor en el documento
-      html.innerHTML = `<div class="container-box">${tpt.join("")}</div>`;
+      html.innerHTML = `<div class="container-box">${contentcharacter.join("")}</div>`; //contentcharacter se inserta en el container-box
     });
 };
 
