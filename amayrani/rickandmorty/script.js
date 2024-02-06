@@ -4,6 +4,10 @@ const API_URL = "https://rickandmortyapi.com/api";
 //elementos de nuestro DOM
 const HTMLResponse = document.querySelector("#main-card-container");
 HTMLResponse.className = "main-card-container";
+
+const divFooter = document.getElementById("word-container");
+divFooter.className = "word-container";
+
 //creacion del array que genera numeros aleatorios dentro 1 al 100
 let array = [];
 
@@ -83,3 +87,22 @@ async function getEpisode(url) {
 
   return data.name;
 }
+
+//informacion footer
+let getFooterInfo = (apiInfo) => {
+  Promise.all([
+    fetch(`${apiInfo}/character`),
+    fetch(`${apiInfo}/location`),
+    fetch(`${apiInfo}/episode`),
+  ]).then(async ([characterInfo, locationInfo, episodeInfo]) => {
+    const characterFooter = await characterInfo.json();
+    const locationFooter = await locationInfo.json();
+    const episodeFooter = await episodeInfo.json();
+
+    divFooter.innerHTML = `<a class="a-footer" href="https://rickandmortyapi.com/api/character">CHARACTERS: ${characterFooter.info.count}</a>
+    <a class="a-footer" href="https://rickandmortyapi.com/api/location">LOCATIONS: ${locationFooter.info.count}</a>
+    <a class="a-footer" href="https://rickandmortyapi.com/api/episode">EPISODES: ${episodeFooter.info.count}</a>`;
+  });
+};
+
+getFooterInfo(API_URL);
