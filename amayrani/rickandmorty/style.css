@@ -1,0 +1,241 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  margin: 0%;
+}
+
+div {
+  display: flex;
+}
+
+p {
+  margin: 0;
+  color: #222122;
+  font-size: 18px;
+}
+
+.div-title {
+  width: 100%;
+  height: 200px;
+  background-image: url(rickandmorty.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  justify-content: center;
+}
+
+.background-container {
+  width: 100%;
+  background-color: #33323b;
+}
+
+h1 {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  color: #000000;
+  font-size: 60px;
+  text-align: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.a-edit {
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-right: 20px;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.a-edit-container {
+  padding: 0;
+  font-size: 16px;
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.a-edit-container:hover,
+.name-element:hover,
+.name:hover,
+.a-card:hover,
+.a-edit:hover,
+.a-footer:hover {
+  color: #ff6600;
+  /* Cambia el color del texto al pasar por encima */
+}
+
+.a-edit-button {
+  border: 2px solid #ff6600;
+  background-color: #ffffff;
+  color: #ff6600;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-right: 8px;
+  margin-top: 15px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.a-edit-button:hover {
+  background-color: #ff6600;
+  color: #ffffff;
+}
+
+.card {
+  background-color: rgb(81, 87, 87);
+  display: flex;
+  border-radius: 20px;
+  width: 500px;
+  height: 200px;
+  gap: 15px;
+
+}
+
+.name-element {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0;
+  font-size: 20px;
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+
+}
+
+.location-container {
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.name-container {
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.episode-container {
+  flex-direction: column;
+  gap: 8px;
+
+}
+
+.info-container {
+  flex-direction: column;
+  background-color: rgb(81, 87, 87);
+  gap: 10px;
+  justify-content: space-around;
+}
+
+/*------------------------------------------*/
+.main-card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.style-card {
+  background-color: #4b4a4f;
+  display: flex;
+  padding: 30px;
+  border-radius: 10px;
+  width: 405px;
+  height: 115px;
+}
+
+.name {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  padding: 0;
+  font-size: 16px;
+  /* Tamaño de la fuente */
+  margin: 0;
+  color: #ffffff;
+  align-self: flex-start;
+}
+
+
+.a-card {
+  font-family: "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  color: #ffffff;
+  margin: 0;
+}
+
+
+.img-card {
+  max-width: 100px;
+  margin-right: 20px;
+}
+
+
+.imgCharacters {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/*footer*/
+
+.footer-container {
+  flex-direction: column;
+  width: auto;
+  min-height: 250px;
+  background-color: #1c1f21;
+  align-items: center;
+  justify-content: center;
+}
+
+.word-container {
+  display: flex;
+  gap: 45px;
+  margin: 20px 0;
+}
+
+.style-a-server {
+  margin: 10px;
+
+}
+
+.status-dot {
+  transform: translateY(-50%);
+  color: chartreuse;
+}
+
+.footer-img {
+  width: 100;
+  height: 40px;
+  left: 520px;
+  bottom: 110px;
+  margin-right: 10px;
+}
+
+.icons-container {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+
+.author-container,
+.icons-container,
+.server-container,
+.img-footer-container {
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.a-footer {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.style-status {
+  color: #ffffff;
+}
