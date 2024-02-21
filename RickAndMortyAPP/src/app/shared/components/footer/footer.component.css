@@ -1,0 +1,48 @@
+.sub-footer a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer-server-madeby a {
+    display: flex;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.footer-server-madeby img {
+    max-width: 0.5%;
+}
+
+.footer,
+.footer-server-madeby,
+.footer-company,
+.footer-socialnetworks {
+    display: flex;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.893);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.footer-company img {
+    width: 60px;
+    height: 60px;
+    margin-left: 10px;
+}
+
+.footer-socialnetworks img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px
+}
+
+/*------------------------------------------------------------------*/

@@ -1,0 +1,97 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-container {
+    background-color: rgba(6, 4, 18, 0.885);
+    display: flex;
+}
+
+.container-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: center;
+}
+
+div .sub-box {
+    border-radius: 10px;
+}
+
+.sub-box {
+    background-color: rgb(65, 65, 65);
+    width: 550px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 10px 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.status-character {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+    color: #f2f2f2;
+}
+
+.circle-status {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 100%;
+}
+
+.text-container .nameLocation-nameEpisode a {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.text-container .nameLocation-nameEpisode a,
+.name-character a {
+    display: flex;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+}
+
+.name-character a {
+    font-size: 20px;
+}
+
+.text-container .data-status-species {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.text-container .location-episode-title {
+    font-size: 15px;
+    color: grey;
+}
+
+.name-character a:hover,
+.nameLocation-nameEpisode a:hover {
+    color: darkorange;
+}
+
+.text-container {
+    width: 500px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(65, 65, 65);
+    font-style: normal;
+    margin-right: 10px;
+}
