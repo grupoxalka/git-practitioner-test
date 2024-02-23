@@ -1,8 +1,11 @@
 <app-header></app-header>
-<div *ngFor="let character of characters">
-  <app-card [name]="character.name" [image]="character.image" [status]="character.status" [specie]="character.species" [location]="character.location.name"></app-card>
-</div>
 
 <body>
-  <app-footer></app-footer>
+  <div class="main-container">
+    <div class="container-card" *ngFor="let character of characters">
+      <app-card [name]="character.name" [image]="character.image" [status]="character.status"
+        [specie]="character.species" [location]="character.location.name" [episode]="character.episodeName"></app-card>
+    </div>
+  </div>
+    <app-footer [countCharacters]="counts.characters" [countLocations]="counts.locations" [countEpisodes]="counts.episodes"></app-footer>
 </body>

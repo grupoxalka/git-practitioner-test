@@ -23,13 +23,26 @@ export class AppComponent implements OnInit {
   title = 'RickAndMortyAPP';
 
   constructor(private characterService: CharacterService) {}
-
+  counts: any = {};
   characters: Array<any> = []; //data = undefined
+  
   ngOnInit(): void {
     this.characterService.getData().subscribe((data) => {
       console.log(data); //data = content
       this.characters = data;
+      // Por cada personaje, obtenemos el nombre del episodio
+      this.characters.forEach((character) => {
+        this.characterService
+          .getEpisode(character.episode[0])
+          .subscribe((episodeName) => {
+            character.episodeName = episodeName;
+            console.log(episodeName);
+          });
+      });
     });
-    console.log(this.characters);
+    // Obtener los recuentos
+    this.characterService.getCounts().subscribe((counts) => {
+      this.counts = counts;
+    });
   }
 }

@@ -1,3 +1,4 @@
+import { CommonModule } from "@angular/common";
 import { Component, Input } from "@angular/core";
 
 @Component({
@@ -5,7 +6,7 @@ import { Component, Input } from "@angular/core";
     templateUrl: './card.component.html',
     styleUrls: ['./card.component.css'],
     standalone: true,
-    imports:[]
+    imports:[CommonModule]
 })
 
 export class CardComponent {
@@ -14,4 +15,6 @@ export class CardComponent {
     @Input() status: string = "";
     @Input() specie: string = "";
     @Input() location: string = "";
+    @Input() episode: string = "";
+    
 }
