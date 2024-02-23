@@ -1,0 +1,112 @@
+.sub-card {
+    border-radius: 15px;
+}
+
+.sub-card img {
+    width: 95%;
+    height: 95%;
+}
+
+.sub-card {
+    background-color: rgb(65, 65, 65);
+    width: 600px;
+    height: 220px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    gap: 10px 15px;
+}
+
+.status-character {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 15px;
+}
+
+p {
+    margin: 0px;
+    font-size: 20px;
+    color: #f2f2f2;
+}
+
+.text-container .nameLocationEpisodes a {
+    font-size: 17px;
+}
+
+.nameLocationEpisodes a,
+.name-character a {
+    display: flex;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+}
+
+.name-character a {
+    font-size: 27px;
+}
+
+.text-container .data-status-species,
+.text-container .title-locationEpisode {
+    font-size: 16px;
+}
+
+.nameLocationEpisodes {
+    font-size: 18px;
+}
+
+.text-container .title-locationEpisode {
+    color: grey;
+}
+
+.name-character a:hover,
+.nameLocationEpisodes a:hover {
+    color: darkorange;
+}
+
+.text-container {
+    width: 370px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(65, 65, 65);
+    font-style: normal;
+    margin-right: 10px;
+    gap: 20px;
+}
+
+.status-circle {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 100%;
+}
+
+.container-status-species {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.container-img {
+    width: 230px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.container-nameStatus,
+.container-nameLocation,
+.container-nameEpisode {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}

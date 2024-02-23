@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
-import {  CharacterComponent  } from './components/pages/characters/character/character.component';
+import { CardComponent } from './shared/components/card/card.component';
 
 export const routes: Routes = [
     {
-        path: '', component: CharacterComponent 
+        path: '', component: CardComponent 
     }
 ];

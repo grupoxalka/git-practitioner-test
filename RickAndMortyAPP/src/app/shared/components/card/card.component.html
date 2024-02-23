@@ -1,0 +1,26 @@
+<div class="sub-card">
+    <div class="container-img">
+        <img [src]="image" id="img-character" alt="">
+    </div>
+    <div class="text-container">
+        <div class="container-nameStatus">
+            <div class="name-character">
+                <a href="#"><strong>{{name}}</strong></a>
+            </div>
+            <div class="status-character">
+                <div class="container-status-species">
+                    <div class="status-circle"></div>
+                    <p class="data-status-species">{{status}} - {{specie}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-nameLocation">
+            <p class="title-locationEpisode">Last known location:</p>
+            <div class="nameLocationEpisodes"><a href="#">{{location}}</a></div>
+        </div>
+        <div class="container-nameEpisode">
+            <p class="title-locationEpisode">First seen in:</p>
+            <div class="nameLocationEpisodes"><a href="#">Desconocido</a></div>
+        </div>
+    </div>
+</div>

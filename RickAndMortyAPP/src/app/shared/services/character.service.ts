@@ -1,22 +1,18 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CharacterService {
-  private apiUrl = 'https://rickandmortyapi.com/api/'
-  
+  apiUrl = 'https://rickandmortyapi.com/api/';
 
-  constructor( private httpClient: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  
-  getData(): Observable<any>{
-    let arraychar = [];
-    for (let i = 0; i < 6; i++) {
-      arraychar.push(Math.floor(Math.random() * (826 - 1)));
-    }
-    return this.httpClient.get<any>(`${this.apiUrl}/character/${arraychar}`)
+  getData(){
+    const arrayChar = Array.from({ length: 1 }, () => Math.floor(Math.random() * (826 - 1) + 1));
+    
+    return this.http.get<any>(`${this.apiUrl}character/${arrayChar.join(',')}`);
   }
 }
